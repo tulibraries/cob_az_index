@@ -3,7 +3,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/tulibraries/cob_az_index/badge.svg?branch=master)](https://coveralls.io/github/tulibraries/cob_az_index?branch=master)
 
 Cob Index is a repository to hold the traject configuration files and scripts
-associated with indexing of the tul_cob books catalog.
+associated with indexing of the az (libguides) database documents.
 
 ## Installation
 
@@ -31,7 +31,7 @@ cob_az_index ingest $path_to_file
 
 `$path_to_file` can also be a URL.
 
-Note also that `$path_to_file` is a an optional arugment. If not provided then by default ingest will attempt to download a copy of the az db and import that file.
+Note also that `$path_to_file` is an optional arugment. If not provided then by default ingest will attempt to download a copy of the az db and import that file.
 
 
 ## Development
