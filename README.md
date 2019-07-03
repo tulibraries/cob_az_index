@@ -23,7 +23,7 @@ Or install it yourself as:
 
 ## Usage
 
-`cob_az_index` is an executable.  You can use it to ingest files into SOLR_URL with
+`cob_az_index` is an executable.  You can use it to ingest files into SOLR_AZ_URL with
 
 ```
 cob_az_index ingest $path_to_file
@@ -31,7 +31,7 @@ cob_az_index ingest $path_to_file
 
 `$path_to_file` can also be a URL.
 
-Note also that `$path_to_file` is an optional arugment. If not provided then by default ingest will attempt to download a copy of the az db and import that file.
+Note also that `$path_to_file` is an optional argument. If not provided then by default ingest will attempt to download a copy of the AZ db and import that file.
 
 
 ## Development

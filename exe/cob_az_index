@@ -20,7 +20,7 @@ class App
     c.desc "Ingest files into SOLR_URL using the az db traject config"
     c.action do |global_options, options, args|
 
-      options = args.empty? ? { ingest_path: args[0] } :
+      options = !args.empty? ? { ingest_path: args[0] } :
         { ingest_string: CobAzIndex::CLI.pull }
 
       CobAzIndex::CLI.ingest(options)
