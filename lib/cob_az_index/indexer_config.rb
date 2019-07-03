@@ -10,9 +10,13 @@ extend TrajectPlus::Macros
 extend TrajectPlus::Macros::JSON
 extend CobAzIndex::Macros
 
-solr_config = YAML.load_file("config/blacklight.yml")[(ENV["RAILS_ENV"] || "development")]
 
-solr_url = ERB.new(solr_config["url"]).result
+if File.exist? "config/blacklight.yml"
+  solr_config = YAML.load_file("config/blacklight.yml")[(ENV["RAILS_ENV"] || "development")]
+  solr_url = ERB.new(solr_config["az_url"]).result
+else
+  solr_url = ENV["SOLR_AZ_URL"]
+end
 
 settings do
   provide "reader_class_name", "TrajectPlus::JsonReader"
@@ -38,7 +42,6 @@ to_field "format", ->(rec, acc) {
 }
 to_field "format_t", ->(rec, acc) {
   types = rec.fetch("az_types", [])
-  types.each { |type| acc << type["name"] unless type["name"] == "Database" }
 }
 to_field "database_display", ->(rec, acc) {
   types = rec.fetch("az_types", [])
