@@ -14,6 +14,7 @@ module CobAzIndex
         ingest_string = open(ingest_path).read
       end
 
+      indexer.writer.delete(query: "*:*")
       indexer.process(StringIO.new(ingest_string))
     end
 
