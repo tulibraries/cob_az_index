@@ -20,6 +20,9 @@ class App
     c.desc "Ingest files from gems fixtures (useful for development)"
     c.switch ["use-fixtures"], default_value: false
 
+    c.desc "Delete docs before ingesting new ones"
+    c.switch ["delete"], default_value: false
+
     c.desc "Ingest files into SOLR_URL using the az db traject config"
     c.action do |global_options, options, args|
 
