@@ -10,7 +10,6 @@ extend TrajectPlus::Macros
 extend TrajectPlus::Macros::JSON
 extend CobAzIndex::Macros
 
-
 if File.exist? "config/blacklight.yml"
   solr_config = YAML.load_file("config/blacklight.yml")[(ENV["RAILS_ENV"] || "development")]
   solr_url = ERB.new(solr_config["az_url"]).result
@@ -26,6 +25,12 @@ settings do
 
   # set this to be non-negative if threshold should be enforced
   provide "solr_writer.max_skipped", -1
+
+  if ENV["SOLR_AUTH_USER"] && ENV["SOLR_AUTH_PASSWORD"]
+    client = HTTPClient.new
+    client.set_auth(solr_url, ENV["SOLR_AUTH_USER"], ENV["SOLR_AUTH_PASSWORD"])
+    provide "solr_json_writer.http_client", client
+  end
 end
 
 each_record do |record, context|
