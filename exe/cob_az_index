@@ -34,6 +34,10 @@ class App
         ops.merge!(ingest_path: "#{File.dirname(__FILE__)}/../spec/fixtures/databases.json")
       end
 
+      if options[:delete]
+        ops.merge!(delete: true)
+      end
+
       CobAzIndex::CLI.ingest(ops)
     end
   end
