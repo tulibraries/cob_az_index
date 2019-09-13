@@ -22,9 +22,7 @@ settings do
   provide "solr_writer.commit_timeout", (15 * 60)
   provide "solr.url", solr_url
   provide "solr_writer.commit_on_close", "false"
-
-  # set this to be non-negative if threshold should be enforced
-  provide "solr_writer.max_skipped", -1
+  provide "solr_writer.max_skipped", 0
 
   if ENV["SOLR_AUTH_USER"] && ENV["SOLR_AUTH_PASSWORD"]
     client = HTTPClient.new
