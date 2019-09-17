@@ -27,9 +27,8 @@ settings do
   provide "solr_writer.max_skipped", -1
 
   if ENV["SOLR_AUTH_USER"] && ENV["SOLR_AUTH_PASSWORD"]
-    client = HTTPClient.new
-    client.set_auth(solr_url, ENV["SOLR_AUTH_USER"], ENV["SOLR_AUTH_PASSWORD"])
-    provide "solr_json_writer.http_client", client
+    provide "solr_json_writer.basic_auth_user", ENV["SOLR_AUTH_USER"]
+    provide "solr_json_writer.basic_auth_password", ENV["SOLR_AUTH_PASSWORD"]
   end
 end
 
