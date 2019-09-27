@@ -6,7 +6,7 @@ require "httparty"
 
 module CobAzIndex
   module CLI
-    def self.ingest(ingest_path: nil, ingest_string: "")
+    def self.ingest(ingest_path: nil, ingest_string: "", delete: false)
       indexer = Traject::Indexer::MarcIndexer.new("solr_writer.commit_on_close": true)
       indexer.load_config_file("#{File.dirname(__FILE__)}/cob_az_index/indexer_config.rb")
 
@@ -14,7 +14,7 @@ module CobAzIndex
         ingest_string = open(ingest_path).read
       end
 
-      indexer.writer.delete(query: "*:*")
+      indexer.writer.delete(query: "*:*") if delete
       indexer.process(StringIO.new(ingest_string))
     end
 
