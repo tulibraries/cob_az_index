@@ -8,8 +8,6 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 gemspec
 
 group :debug do
-  gem "ruby-debug", platform: "jruby"
-
   gem "binding_of_caller", "~> 0.7", platform: "mri"
   gem "guard", "~> 2.14", platform: "mri"
   gem "guard-rspec", "~> 4.7", platform: "mri"
