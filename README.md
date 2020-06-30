@@ -1,6 +1,6 @@
-# TUL A-Z databases indexing (cob_az_index)
-[![Build Status](https://travis-ci.org/tulibraries/cob_az_index.svg?branch=master)](https://travis-ci.org/tulibraries/cob_az_index)
-[![Coverage Status](https://coveralls.io/repos/github/tulibraries/cob_az_index/badge.svg?branch=master)](https://coveralls.io/github/tulibraries/cob_az_index?branch=master)
+# CobAzIndex
+[![Build Status](https://travis-ci.org/tulibraries/cob_az_index.svg?branch=main)](https://travis-ci.org/tulibraries/cob_az_index)
+[![Coverage Status](https://coveralls.io/repos/github/tulibraries/cob_az_index/badge.svg?branch=main)](https://coveralls.io/github/tulibraries/cob_az_index?branch=main)
 
 **cob_az_index** is a repository that holds the [Traject](https://github.com/traject/traject) configuration files and scripts
 associated with the indexing of Springshare A-Z database records for Temple University Libraries' Library Search ([tul_cob](https://github.com/tulibraries/tul_cob)).
@@ -53,4 +53,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the CobAzIndex project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/tulibraries/cob_az_index/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the CobAzIndex project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/tulibraries/cob_az_index/blob/main/CODE_OF_CONDUCT.md).
