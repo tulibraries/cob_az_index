@@ -93,6 +93,6 @@ to_field "subject_t", -> (rec, acc) {
 
 each_record do |record, context|
   if ENV["SOLR_DISABLE_UPDATE_DATE_CHECK"] == "yes"
-    context.output_hash["record_update_date"] = [ Time.now.to_s ]
+    context.output_hash["record_update_date"] = [ Time.zone.now.to_s ]
   end
 end
