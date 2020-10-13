@@ -25,13 +25,13 @@ class App
 
     c.desc "Ingest files into SOLR_URL using the az db traject config"
     c.action do |global_options, options, args|
-
-
-      ops = !args.empty? ? { ingest_path: args[0] } :
-        { ingest_string: CobAzIndex::CLI.pull }
-
-      if options["use-fixtures"]
+      ops = {}
+      if !args.empty?
+        ops.merge!(ingest_path: args[0])
+      elsif options["use-fixtures"]
         ops.merge!(ingest_path: "#{File.dirname(__FILE__)}/../spec/fixtures/databases.json")
+      else
+        ops.merge!(ingest_string: CobAzIndex::CLI.pull)
       end
 
       if options[:delete]
