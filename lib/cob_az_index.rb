@@ -22,7 +22,7 @@ module CobAzIndex
       endpoint = "https://lgapi-us.libapps.com/1.2/oauth/token"
 
       response = HTTParty.post(endpoint, body: { client_id: client_id, client_secret: client_secret, grant_type: "client_credentials" })
-      cred = JSON.parse(response)
+      cred = JSON.parse(response.body)
 
       endpoint = "https://lgapi-us.libapps.com/1.2/az"
       token = cred["access_token"]

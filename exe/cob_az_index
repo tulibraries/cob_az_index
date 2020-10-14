@@ -42,6 +42,15 @@ class App
     end
   end
 
+  desc "Pulls databases from Alma API and outputs to STDOUT as a JSON string"
+  command :pull do |c|
+
+    c.desc "Pulls databases from Alma API and outputs to STDOUT as a JSON string"
+    c.action do |global_options, options, args|
+      puts CobAzIndex::CLI.pull()
+    end
+  end
+
   pre do |global, command, options, args|
     # Pre logic here
     # Return true to proceed; false to abort and not call the
