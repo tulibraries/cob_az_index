@@ -198,6 +198,7 @@ GEM
 PLATFORMS
   java
   ruby
+  x86_64-darwin-19
 
 DEPENDENCIES
   binding_of_caller (~> 0.7)
@@ -214,4 +215,4 @@ DEPENDENCIES
   rubocop-rails
 
 BUNDLED WITH
-   2.0.2
+   2.2.2
