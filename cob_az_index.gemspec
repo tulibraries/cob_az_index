@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["David Kinzer"]
   spec.email         = ["dtkinzer@gmail.com"]
 
-  spec.summary       = "Traject configuraiton and scripts for tul_cob az database"
+  spec.summary       = "Traject configuration and scripts for tul_cob az database"
   spec.description   = "Separates az indexing out of tulibraries/tul_cob repo"
   spec.homepage      = "https://github.com/tulibraries/cob_az_index"
   spec.license       = "MIT"
