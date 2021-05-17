@@ -9,7 +9,7 @@ gemspec
 
 group :debug do
   gem "binding_of_caller", "~> 1.0", platform: "mri"
-  gem "guard", "~> 2.14", platform: "mri"
+  gem "guard", "~> 2.17", platform: "mri"
   gem "guard-rspec", "~> 4.7", platform: "mri"
   gem "pry", "~> 0.11", platform: "mri"
   gem "pry-byebug", "~> 3.5", platform: "mri"
