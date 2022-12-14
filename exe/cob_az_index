@@ -38,7 +38,7 @@ class App
         ops.merge!(delete: true)
       end
 
-      CobAzIndex::CLI.ingest(ops)
+      CobAzIndex::CLI.ingest(**ops)
     end
   end
 
