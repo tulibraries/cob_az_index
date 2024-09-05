@@ -69,7 +69,7 @@ to_field "availability_facet", -> (rec, acc) {
 
 to_field "electronic_resource_display", -> (rec, acc) {
   url =
-    if rec.dig("meta", "enable_proxy") == 1
+    if [1, true].include? rec.dig("meta", "enable_proxy")
       "http://libproxy.temple.edu/login?url=#{rec['url']}"
     else
       rec["url"]
