@@ -33,7 +33,7 @@ GEM
     coderay (1.1.3)
     concurrent-ruby (1.3.8)
     connection_pool (3.0.2)
-    csv (3.3.5)
+    csv (3.3.6)
     debug_inspector (1.2.0)
     deprecation (1.1.0)
       activesupport
@@ -79,7 +79,7 @@ GEM
       multi_xml (>= 0.5.2)
     httpclient (2.9.0)
       mutex_m
-    httpx (1.8.0)
+    httpx (1.8.1)
       http-2 (>= 1.2.0)
     i18n (1.15.2)
       concurrent-ruby (~> 1.0)
@@ -189,7 +189,7 @@ GEM
     simplecov_json_formatter (0.1.4)
     slop (4.10.1)
     thor (1.5.0)
-    traject (3.9.0)
+    traject (3.9.1)
       base64
       concurrent-ruby (>= 0.8.0)
       csv
