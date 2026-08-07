@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require "bundler/setup"
-require "cob_az_index"
 require "simplecov"
 require "simplecov-lcov"
 
@@ -14,6 +13,8 @@ SimpleCov.formatters = SimpleCov::Formatter::MultiFormatter.new(
 )
 
 SimpleCov.start
+
+require "cob_az_index"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
