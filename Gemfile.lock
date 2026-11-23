@@ -49,7 +49,7 @@ GEM
       reline
     gli (2.22.2)
       ostruct
-    guard (2.20.2)
+    guard (2.21.0)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
       logger (~> 1.6)
@@ -82,13 +82,13 @@ GEM
       http-2 (>= 1.2.0)
     i18n (1.15.2)
       concurrent-ruby (~> 1.0)
-    io-console (0.9.4)
+    io-console (0.9.5)
     json (3.1.0)
     jsonpath (1.1.5)
       multi_json
     language_server-protocol (3.17.0.6)
     lint_roller (1.1.0)
-    listen (3.10.0)
+    listen (3.10.1)
       logger
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -229,7 +229,7 @@ DEPENDENCIES
   binding_of_caller (~> 2.0)
   bundler (>= 1.16)
   cob_az_index!
-  guard (~> 2.20)
+  guard (~> 2.21)
   guard-rspec (~> 4.7)
   pry (~> 0.16)
   pry-byebug (~> 3.11)
